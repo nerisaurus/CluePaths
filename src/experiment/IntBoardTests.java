@@ -3,6 +3,7 @@ package experiment;
 import static org.junit.Assert.*;
 
 import java.util.LinkedList;
+import java.util.Set;
 
 import junit.framework.Assert;
 
@@ -84,32 +85,71 @@ public class IntBoardTests {
 	// Targetz Testz
 	@Test
 	public void test_Targetz_0_1(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		fail("Not yet implemented");
+		board.startTargetz(0, 0, 1);
+		Set targets= board.getTargetz();
+		Assert.assertEquals(2, targets.size());
+		Assert.assertTrue(targets.contains(1));
+		Assert.assertTrue(targets.contains(4));
 	}
 	
 	@Test
 	public void test_Targetz_9_5(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		fail("Not yet implemented");
+		board.startTargetz(2, 1, 5);
+		Set targets= board.getTargetz();
+		Assert.assertEquals(7, targets.size());
+		Assert.assertTrue(targets.contains(2));
+		Assert.assertTrue(targets.contains(5));
+		Assert.assertTrue(targets.contains(7));
+		Assert.assertTrue(targets.contains(8));
+		Assert.assertTrue(targets.contains(10));
+		Assert.assertTrue(targets.contains(13));
+		Assert.assertTrue(targets.contains(15));
 	}
 	
 	@Test
 	public void test_Targetz_15_2(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		fail("Not yet implemented");
+		board.startTargetz(3, 3, 2);
+		Set targets= board.getTargetz();
+		Assert.assertEquals(3, targets.size());
+		Assert.assertTrue(targets.contains(7));
+		Assert.assertTrue(targets.contains(10));
+		Assert.assertTrue(targets.contains(13));
 	}
 	
 	@Test
 	public void test_Targetz_11_2(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		fail("Not yet implemented");
+		board.startTargetz(2, 3, 2);
+		Set targets= board.getTargetz();
+		Assert.assertEquals(4, targets.size());
+		Assert.assertTrue(targets.contains(3));
+		Assert.assertTrue(targets.contains(6));
+		Assert.assertTrue(targets.contains(9));
+		Assert.assertTrue(targets.contains(14));
 	}
 	
 	@Test
 	public void test_Targetz_10_1(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		fail("Not yet implemented");
+		board.startTargetz(2, 2, 1);
+		Set targets= board.getTargetz();
+		Assert.assertEquals(4, targets.size());
+		Assert.assertTrue(targets.contains(6));
+		Assert.assertTrue(targets.contains(9));
+		Assert.assertTrue(targets.contains(11));
+		Assert.assertTrue(targets.contains(14));
 	}
 	
 	@Test
 	public void test_Targetz_13_3(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		fail("Not yet implemented");
+		board.startTargetz(3, 1, 3);
+		Set targets= board.getTargetz();
+		Assert.assertEquals(7, targets.size());
+		Assert.assertTrue(targets.contains(1));
+		Assert.assertTrue(targets.contains(4));
+		Assert.assertTrue(targets.contains(6));
+		Assert.assertTrue(targets.contains(9));
+		Assert.assertTrue(targets.contains(11));
+		Assert.assertTrue(targets.contains(12));
+		Assert.assertTrue(targets.contains(14));
 	}
 
 }
