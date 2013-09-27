@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class IntBoard {
 
-	public IntBoard() {
+	public IntBoard(int verticalSize, int horizontalSize) {
 		super();
 		// TODO Auto-generated constructor stub
 	}
