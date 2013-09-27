@@ -37,27 +37,48 @@ public class IntBoardTests {
 	
 	@Test
 	public void test_Adjacencies_bottom_right(){
-		fail("Not yet implemented");
+		LinkedList testList = board.getAdjList(15);
+		Assert.assertTrue(testList.contains(14));
+		Assert.assertTrue(testList.contains(11));
+		Assert.assertEquals(2, testList.size());
 	}
 	
 	@Test
 	public void test_Adjacencies_right_edge(){
-		fail("Not yet implemented");
+		LinkedList testList = board.getAdjList(7);
+		Assert.assertTrue(testList.contains(3));
+		Assert.assertTrue(testList.contains(6));
+		Assert.assertTrue(testList.contains(11));
+		Assert.assertEquals(3, testList.size());
 	}
 	
 	@Test
 	public void test_Adjacencies_left_edge(){
-		fail("Not yet implemented");
+		LinkedList testList = board.getAdjList(8);
+		Assert.assertTrue(testList.contains(4));
+		Assert.assertTrue(testList.contains(9));
+		Assert.assertTrue(testList.contains(12));
+		Assert.assertEquals(3, testList.size());
 	}
 	
 	@Test
 	public void test_Adjacencies_middle1(){
-		fail("Not yet implemented");
+		LinkedList testList = board.getAdjList(9);
+		Assert.assertTrue(testList.contains(5));
+		Assert.assertTrue(testList.contains(8));
+		Assert.assertTrue(testList.contains(10));
+		Assert.assertTrue(testList.contains(13));
+		Assert.assertEquals(4, testList.size());
 	}
 	
 	@Test
 	public void test_Adjacencies_middle2(){
-		fail("Not yet implemented");
+		LinkedList testList = board.getAdjList(5);
+		Assert.assertTrue(testList.contains(1));
+		Assert.assertTrue(testList.contains(4));
+		Assert.assertTrue(testList.contains(6));
+		Assert.assertTrue(testList.contains(9));
+		Assert.assertEquals(4, testList.size());
 	}
 	
 	// Targetz Testz
