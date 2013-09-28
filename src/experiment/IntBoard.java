@@ -1,12 +1,19 @@
 package experiment;
 
+import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Set;
 
 public class IntBoard {
+	private Map<Integer, LinkedList<Integer>> adjacencyMatrix;
+	private boolean visited[];
 
 	public IntBoard(int verticalSize, int horizontalSize) {
-		super();
+		int boardSize = verticalSize * horizontalSize; //a rectangular board
+		adjacencyMatrix = new HashMap<Integer, LinkedList<Integer>>(boardSize);
+		visited = new boolean [boardSize];
+		
 		// TODO Auto-generated constructor stub
 	}
 	
