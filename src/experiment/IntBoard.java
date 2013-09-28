@@ -29,37 +29,24 @@ public class IntBoard {
 		for(int i=0; i<boardSize; i++){
 			LinkedList<Integer> list = new LinkedList<Integer>();
 			
-			//top row
-			if(i<width){
-				list.add(i+1);
-				list.add(i+width);
+			//NOT top row
+			if(i>width){
+				list.add(i-width);
+			}
+			//NOT left column
+			if(i % height != 0){
 				list.add(i-1);
 			}
-			//left column
-			else if(i % height == 0){
+			//NOT right column
+			if((i+1) % height != 0) {
 				list.add(i+1);
+			}
+			//NOT bottom row
+			if(i <= (boardSize-width)){
 				list.add(i+width);
-				list.add(i-width);
 			}
-			//right column
-			else if((i+1) % height ==0) {
-				list.add(i+1);
-				list.add(i+width);
-				list.add(i-width);
-			}
-			//bottom row
-			else if(i > (boardSize-width)){
-				list.add(i+1);
-				list.add(i-width);
-				list.add(i-1);
-			}
-			//middle
-			else {
-				list.add(i+1);
-				list.add(i+width);
-				list.add(i-1);
-				list.add(i-width);
-			}
+
+			System.out.println(i + "=>" + list);
 			adjacencyMatrix.put(i, list);
 		}
 		
