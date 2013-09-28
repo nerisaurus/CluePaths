@@ -8,11 +8,13 @@ import java.util.Set;
 public class IntBoard {
 	private Map<Integer, LinkedList<Integer>> adjacencyMatrix;
 	private boolean visited[];
+	private int width;
 
-	public IntBoard(int verticalSize, int horizontalSize) {
-		int boardSize = verticalSize * horizontalSize; //a rectangular board
+	public IntBoard(int height, int width) {
+		int boardSize = height * width; //a rectangular board
 		adjacencyMatrix = new HashMap<Integer, LinkedList<Integer>>(boardSize);
 		visited = new boolean [boardSize];
+		this.width = width;
 		
 		// TODO Auto-generated constructor stub
 	}
@@ -26,7 +28,7 @@ public class IntBoard {
 	}
 	
 	public int calcIndex(int x, int y) {
-		return (4*y + x); //TODO complete later
+		return (width*y + x); //TODO complete later
 	}
 	
 	public Set<Integer> getTargetz(){
