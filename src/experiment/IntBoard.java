@@ -26,7 +26,7 @@ public class IntBoard {
 	}
 	
 	public int calcIndex(int x, int y) {
-		return 0; //TODO complete later
+		return (4*y + x); //TODO complete later
 	}
 	
 	public Set<Integer> getTargetz(){
