@@ -12,15 +12,56 @@ public class IntBoard {
 	private boolean visited[];
 	private int width;
 	private Set<Integer> currentTargetz;
+	private int height;
+	private int boardSize;
 
 	public IntBoard(int height, int width) {
-		int boardSize = height * width; //a rectangular board
+		this.boardSize = height * width; //a rectangular board
 		adjacencyMatrix = new HashMap<Integer, LinkedList<Integer>>(boardSize);
 		visited = new boolean [boardSize];
 		this.width = width;
+		this.height = height;
+		calcAdjacencies();
 	}
 	
-	public void calcAdjacencies(){
+	//no need to call other than in the constructor.
+	private void calcAdjacencies(){
+		for(int i=0; i<boardSize; i++){
+			LinkedList<Integer> list = new LinkedList<Integer>();
+			
+			//top row
+			if(i<width){
+				list.add(i+1);
+				list.add(i+width);
+				list.add(i-1);
+			}
+			//left column
+			else if(i % height == 0){
+				list.add(i+1);
+				list.add(i+width);
+				list.add(i-width);
+			}
+			//right column
+			else if((i+1) % height ==0) {
+				list.add(i+1);
+				list.add(i+width);
+				list.add(i-width);
+			}
+			//bottom row
+			else if(i > (boardSize-width)){
+				list.add(i+1);
+				list.add(i-width);
+				list.add(i-1);
+			}
+			//middle
+			else {
+				list.add(i+1);
+				list.add(i+width);
+				list.add(i-1);
+				list.add(i-width);
+			}
+			adjacencyMatrix.put(i, list);
+		}
 		
 	}
 	
