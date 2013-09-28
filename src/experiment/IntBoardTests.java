@@ -93,7 +93,7 @@ public class IntBoardTests {
 	
 	@Test
 	public void test_Targetz_9_5(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		board.startTargetz(2, 1, 5);
+		board.startTargetz(1, 2, 5);
 		Set targets= board.getTargetz();
 		Assert.assertTrue(targets.contains(0));
 		Assert.assertTrue(targets.contains(2));
@@ -118,7 +118,7 @@ public class IntBoardTests {
 	
 	@Test
 	public void test_Targetz_11_2(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		board.startTargetz(2, 3, 2);
+		board.startTargetz(3, 2, 2);
 		Set targets= board.getTargetz();
 		Assert.assertTrue(targets.contains(3));
 		Assert.assertTrue(targets.contains(6));
@@ -140,7 +140,7 @@ public class IntBoardTests {
 	
 	@Test
 	public void test_Targetz_13_3(){ // Targetz_x_y means testing startTargetz(x.x, x.y, y);
-		board.startTargetz(3, 1, 3);
+		board.startTargetz(1, 3, 3);
 		Set targets= board.getTargetz();
 		Assert.assertTrue(targets.contains(1));
 		Assert.assertTrue(targets.contains(4));
