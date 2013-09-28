@@ -42,11 +42,10 @@ public class IntBoard {
 				list.add(i+1);
 			}
 			//NOT bottom row
-			if(i <= (boardSize-width)){
+			if(i < (boardSize-width)){
 				list.add(i+width);
 			}
 
-			System.out.println(i + "=>" + list);
 			adjacencyMatrix.put(i, list);
 		}
 		
@@ -63,10 +62,10 @@ public class IntBoard {
 	private void calcTargetz(int index, int steps) {
 		LinkedList<Integer> adjacent_squares = getAdjList(index);
 		for(int adjacent : adjacent_squares){
-			visited[adjacent] = true;
 			if(steps == 1) {
 				currentTargetz.add(adjacent);
 			} else {
+				visited[adjacent] = true;
 				calcTargetz(adjacent, steps - 1);
 			}
 		}
