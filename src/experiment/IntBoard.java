@@ -4,9 +4,13 @@ import java.util.LinkedList;
 import java.util.Set;
 
 public class IntBoard {
+	private int verticalSize;
+	private int horizontalSize;
 
 	public IntBoard(int verticalSize, int horizontalSize) {
 		super();
+		this.verticalSize = verticalSize;
+		this.horizontalSize = horizontalSize;
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -19,7 +23,7 @@ public class IntBoard {
 	}
 	
 	public int calcIndex(int x, int y) {
-		return (4*y + x); //TODO complete later
+		return (verticalSize*y + x); //TODO complete later
 	}
 	
 	public Set<Integer> getTargetz(){
