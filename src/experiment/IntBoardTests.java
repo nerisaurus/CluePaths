@@ -15,7 +15,9 @@ public class IntBoardTests {
 	
 	@Before
 	public void setupBoard(){
-		board = new IntBoard(4,4);
+		board = new IntBoard(4,4); 
+		//makes the 4 by 4 board which we test all of our later cases on
+		//changing the size of the board will INVALIDATE ALL SUBSEQUENT TESTS
 	}
 
 	@Test
@@ -32,7 +34,7 @@ public class IntBoardTests {
 		LinkedList testList = board.getAdjList(0);
 		Assert.assertTrue(testList.contains(4));
 		Assert.assertTrue(testList.contains(1));
-		Assert.assertEquals(2, testList.size());
+		Assert.assertEquals(2, testList.size()); //tests that no extra tiles were selected
 	}
 	
 	@Test
