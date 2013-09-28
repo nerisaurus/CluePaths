@@ -15,8 +15,6 @@ public class IntBoard {
 		adjacencyMatrix = new HashMap<Integer, LinkedList<Integer>>(boardSize);
 		visited = new boolean [boardSize];
 		this.width = width;
-		
-		// TODO Auto-generated constructor stub
 	}
 	
 	public void calcAdjacencies(){
